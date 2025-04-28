@@ -107,38 +107,38 @@ public class Plot {
 
     private void fillCbdontWantChat() {
         if (this.cbdontWantChat) {
-            this.driver.findElement(By.xpath("//*[@id=\"newObjectForm\"]/ul/li[37]/div/div/div")).click();
+            this.driver.findElement(By.xpath("//input[@name='dont_want_chat']/following-sibling::label")).click();
         }
     }
 
     private void fillDontShowInAds() {
         if (this.dontShowInAds) {
-            this.driver.findElement(By.xpath("//*[@id=\"newObjectForm\"]/ul/li[36]/span/label/span")).click();
+            this.driver.findElement(By.xpath("//input[@name='dont_show_in_ads']/following-sibling::label")).click();
         }
     }
 
     private void fillEmail() {
-        this.driver.findElement(By.xpath("//*[@id=\"newObjectForm\"]/ul/li[35]/span[1]/input")).sendKeys(this.email);
+        this.driver.findElement(By.name("email")).sendKeys(this.email);
     }
 
     private void fillPhone() {
-        this.driver.findElement(By.xpath("//*[@id=\"newObjectForm\"]/ul/li[34]/span[1]/input")).sendKeys(this.phone);
+        this.driver.findElement(By.name("phone")).sendKeys(this.phone);
     }
 
     private void fillPrice() {
-        this.driver.findElement(By.xpath("//*[@id=\"priceField\"]")).sendKeys(this.price);
+        this.driver.findElement(By.id("priceField")).sendKeys(this.price);
     }
 
     private void fillTour3d() {
-        this.driver.findElement(By.xpath("//*[@id=\"newObjectForm\"]/ul/li[31]/span[1]/input")).sendKeys(this.tour3d);
+        this.driver.findElement(By.name("tour_3d")).sendKeys(this.tour3d);
     }
 
     private void fillVideo() {
-        this.driver.findElement(By.xpath("//*[@id=\"newObjectForm\"]/ul/li[30]/span[1]/input")).sendKeys(this.video);
+        this.driver.findElement(By.name("Video")).sendKeys(this.video);
     }
 
     private void fillPhotos() {
-        this.driver.findElement(By.xpath("//*[@id=\"uploadPhotoBtn\"]/input")).sendKeys("C:\\Users\\Jonas\\IdeaProjects\\aruodas\\src\\photos\\parduodamas.jpg");
+        this.driver.findElement(By.xpath("//*[@id=\"uploadPhotoBtn\"]/input")).sendKeys(this.photos);
     }
 
     private void fillNotes_ru() {
